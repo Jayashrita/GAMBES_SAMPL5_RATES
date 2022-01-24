@@ -90,13 +90,12 @@ cbhak: COORDINATION GROUPA=v1 GROUPB=WO SWITCH={RATIONAL D_0=0.0 R_0=0.35 NN=16 
 GAMBES ...
   LABEL=gambes
   NSTATES=1
-  ARG=cyl.z,Acube
-  FILENAME=nstate
+  ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,cyl.z
+  FILENAME=dstate
   PACE=500
   BIAS_CUTOFF
-  CUTOFF=20
+  CUTOFF=30
 ... GAMBES
-
 COMMITTOR ...
   ARG=cyl.z,Acube
   STRIDE=250
@@ -105,7 +104,7 @@ COMMITTOR ...
 ... COMMITTOR
 PRINT ARG=* STRIDE=250 FILE=COLVAR FMT=%8.4f
 #PRINT ARG=autoA.node-0,autoB.node-0,swo1,d1.z,swo2,autoC.node-0,funnelwall.bias,upper_wall.bias,opes.bias,opes.rct,swo3,opes.nker,sang,cang,radius,Acube,Bcube,Ccube,swo4,opes.*,ene STRIDE=250 FILE=COLVARmeta FMT=%8.4f
-PRINT ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,radius,cyl.z,cbhak,ene STRIDE=250 FILE=COLVARNN FMT=%8.4f
+PRINT ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,cyl.z,radius,cbhak,ene,gambes.bias STRIDE=250 FILE=COLVARNN FMT=%8.4f
 #PRINT ARG=swo1,swo2,swo3,swo4,vwo1,vwo2,vwo3,vwo4,vwo5,vwo6,vwo7,vwo8,radius,d1.z,ene STRIDE=250 FILE=COLVARNN FMT=%8.4f  
 #PRINT ARG=radius,d1.z STRIDE=250 FILE=COLVARbuca FMT=%8.4f
 PRINT ARG=cyl.z,Acube,gambes.* STRIDE=250 FILE=col_desc FMT=%8.9f
