@@ -1,1 +1,1 @@
-# GAMBES_LigandBinding_SAMPL5
+# GAMBES_SAMPL5_RATES
