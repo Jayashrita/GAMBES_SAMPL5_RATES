@@ -1,6 +1,6 @@
 # vim: ft=plumed
 # --- (1) ATOMS DEFINITIONS and ALIGNMENT --- 
-
+LOAD FILE=GAMBES_log_static_few.cpp
 HOST: GROUP ATOMS=17-212      #host atoms
 LIGC: GROUP ATOMS=4-10    #carbon atoms in the ligand
 l1: GROUP ATOMS=3             #ligand selected atoms
