@@ -75,9 +75,9 @@ UPPER_WALLS AT=0 ARG=funnel KAPPA=2000.0 LABEL=funnelwall
 # Wall on distance to prevent the protein breaking
 UPPER_WALLS AT=1.8 ARG=cyl.z KAPPA=4000.0 EXP=2 LABEL=upper_wall
 
-autoA: PYTORCH_MODEL MODEL=modelG4_NN_UW_OW1a.pt ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12
-autoB: PYTORCH_MODEL MODEL=modelG4_NN_UW_OW1b.pt ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12
-autoC: PYTORCH_MODEL MODEL=modelG4_NN_UW_OW1c.pt ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12
+autoA: PYTORCH_MODEL FILE=modelG4_NN_UW_OW1a.pt ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12
+autoB: PYTORCH_MODEL FILE=modelG4_NN_UW_OW1b.pt ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12
+autoC: PYTORCH_MODEL FILE=modelG4_NN_UW_OW1c.pt ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12
 
 Acube: MATHEVAL ARG=autoA.node-0 FUNC=x+x^3 PERIODIC=NO
 Bcube: MATHEVAL ARG=autoB.node-0 FUNC=x+x^3 PERIODIC=NO
