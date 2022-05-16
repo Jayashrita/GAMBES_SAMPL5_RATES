@@ -1,6 +1,6 @@
 # vim: ft=plumed
 # --- (1) ATOMS DEFINITIONS and ALIGNMENT --- 
-
+LOAD FILE=GAMBES_log.cpp
 HOST: GROUP ATOMS=31-226      #host atoms
 LIGC: GROUP ATOMS=1-8,10-12  #carbon atoms in the ligand
 l1: GROUP ATOMS=3             #ligand selected atoms
@@ -65,7 +65,7 @@ UPPER_WALLS AT=1.8 ARG=cyl.z KAPPA=4000.0 EXP=2 LABEL=upper_wall  #upper limit o
 ang: ANGLE ATOMS=v3,v5,1,7   #angle of a ligand's axis with z
 cosang: MATHEVAL ARG=ang FUNC=cos(x) PERIODIC=NO
 
-GAMBES ...
+GAMBESL ...
   ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,cyl.z
   LABEL=gambes
   NSTATES=3
@@ -75,7 +75,7 @@ GAMBES ...
   STATIC_FACTORS=1,1.00614,1
   BIAS_CUTOFF
   CUTOFF=60
-... GAMBES
+... GAMBESL
 
 COMMITTOR ...
   ARG=cyl.z,sw

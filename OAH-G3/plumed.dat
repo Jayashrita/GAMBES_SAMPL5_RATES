@@ -1,5 +1,6 @@
 # vim:ft=plumed
 # --- (1) ATOMS DEFINITIONS and ALIGNMENT --- 
+LOAD FILE=GAMBES_log.cpp
 
 HOST: GROUP ATOMS=33-216      #host atoms
 LIGC: GROUP ATOMS=1-6,8-10  #carbon atoms in the ligand
@@ -67,7 +68,7 @@ cosang: MATHEVAL ARG=ang FUNC=cos(x) PERIODIC=NO
 
 ene: ENERGY
 
-GAMBES ...
+GAMBESL ...
  ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,cyl.z
  NSTATES=2
  FILENAME=nstate
@@ -77,7 +78,7 @@ GAMBES ...
  CUTOFF=70
  STATIC_BIAS
  STATIC_FACTORS=1,0.1138
-... GAMBES
+... GAMBESL
 
 COMMITTOR ...
   ARG=cyl.z,sw

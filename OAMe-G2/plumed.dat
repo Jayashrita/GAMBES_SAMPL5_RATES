@@ -1,6 +1,6 @@
 # vim:ft=plumed
 # --- (1) ATOMS DEFINITIONS and ALIGNMENT --- 
-#LOAD FILE=GAMBES_log_ncut_sum_in_basins_static_few.cpp
+#LOAD FILE=GAMBES_log.cpp
 HOST: GROUP ATOMS=16-211      #host atoms
 LIGC: GROUP ATOMS=1-7,9  #carbon atoms in the ligand
 l1: GROUP ATOMS=1             #ligand selected atoms
@@ -69,7 +69,7 @@ cosang: MATHEVAL ARG=ang FUNC=cos(x) PERIODIC=NO
 
 # --- (4) OPES  ---
 
-GAMBES ...  
+GAMBESL ...  
     LABEL=gambes
     ARG=d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12,cyl.z
     NSTATES=2        
@@ -79,7 +79,7 @@ GAMBES ...
     CUTOFF=105
     STATIC_BIAS
     STATIC_FACTORS=1,1 
- ... GAMBES  
+ ... GAMBESL  
 COMMITTOR ...
   ARG=cyl.z,sw
   STRIDE=10
