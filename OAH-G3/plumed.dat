@@ -1,5 +1,6 @@
 # vim:ft=plumed
 # --- (1) ATOMS DEFINITIONS and ALIGNMENT --- 
+
 LOAD FILE=GAMBES_log.cpp
 
 HOST: GROUP ATOMS=33-216      #host atoms
